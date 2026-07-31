@@ -1,0 +1,10 @@
+# Since i had compatibility problems with these pyspark and delta-spark versions using them together with newer python version, i built this project and tested on:
+# python 3.11.9 (i would recommend using this version)
+# java 17 version required also, which supports spark 3.5.
+ 
+# requirements needed for this project
+
+pyspark==3.5.6
+delta-spark==3.3.2
+pandas==3.0.5
+ipykernel==7.3.0
