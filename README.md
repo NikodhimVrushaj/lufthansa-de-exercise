@@ -129,6 +129,9 @@ Slowest seller with at least 20 orders: 66e0557ecc2b4dbea057e93f215f68d8 at 31.6
 
 ## Before insatalling packages
 
+### Install Python 3.11.9
+https://www.python.org/downloads/release/python-3119/
+
 ### Install Java 17
 
 Java 17 is supported by Spark 3.5: 
