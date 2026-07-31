@@ -137,7 +137,9 @@ https://www.python.org/downloads/release/python-3119/
 Java 17 is supported by Spark 3.5: 
 https://adoptium.net/temurin/releases/?version=17
 
+```powershell
 echo $env:JAVA_HOME
+```
 
 ### Configure Hadoop Windows utilities
 
@@ -150,51 +152,65 @@ C:\hadoop
 
 Set:
 
+```powershell
 $env:HADOOP_HOME = "C:\hadoop"
 $env:PATH = "C:\hadoop\bin;$env:PATH"
+```
 
 
 ## Setup on Windows
 
 ### 1. Clone the repository
 
+```powershell
 git clone https://github.com/NikodhimVrushaj/lufthansa-de-exercise.git
 cd lufthansa-de-exercise
+```
 
 ### 2. Create and activate a virtual environment
 
+```powershell
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
+```
 
-### 3. Install Python packages
+### 3. Install the required packages
 
+```powershell
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
+```
 
 ### 4. Start Jupyter
 
+```powershell
 jupyter notebook
+```
 
-- Use kernel Python 3.11(lufthansa-de)
+- Use kernel Python 3.11
 
 
 ## Problems that happened during execution and their solutions
 
 - PowerShell blocked activation of venv activation
 
-Solution: Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+Solution: 
+```powershell
+Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+```
 
 - Jupyter used the wrong python installation, python worker crashes
 
 Solution:
 before creating SparkSession executed:
 
+```python
 import os
 import sys
 
 os.environ["PYSPARK_PYTHON"] = sys.executable
 os.environ["PYSPARK_DRIVER_PYTHON"] = sys.executable
-
+```
 
 - spark failed to start or execute jobs, while showing erros like:
 java errors,spark failures and Hadoop errors.
