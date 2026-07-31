@@ -13,7 +13,7 @@ Addition :
 
 
 ## Project Structure
-
+```text
 lufthansa-de-exercise/
 ├── notebooks/
 │   ├── 01_bronze_ingestion.ipynb
@@ -31,7 +31,7 @@ lufthansa-de-exercise/
 ├── README.md
 ├── requirements.txt
 └── .gitignore
-
+```
 
 ## Main Technologies
 
